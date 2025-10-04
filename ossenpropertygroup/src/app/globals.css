@@ -1,0 +1,135 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  /* Polished palette: background, dark highlight, and gold trim */
+  /* Base */
+  --background: #F1F0ED;
+  --foreground: #222831;
+  --card: #F1F0ED;
+  --card-foreground: #222831;
+  --popover: #F1F0ED;
+  --popover-foreground: #222831;
+  /* Brand tokens */
+  --primary: #E4B36B; /* gold for headers/brand */
+  --primary-foreground: #222831;
+  --secondary: #393e46; /* dark muted highlight */
+  --secondary-foreground: #FFFFFF; /* light white text on highlight */
+  --accent: #E4B36B; /* use gold as accent */
+  --accent-foreground: #222831;
+  /* Support */
+  --muted: #E9E6DE;
+  --muted-foreground: #6B655A;
+  --destructive: #C94C4C;
+  --border: #E4B36B; /* gold trim for outlines */
+  --input: #E4B36B; /* gold input outline */
+  --ring: #E4B36B; /* gold focus ring */
+  /* Charts (derived) */
+  --chart-1: #E4B36B;
+  --chart-2: #393E46;
+  --chart-3: #222831;
+  --chart-4: #CBBFA8;
+  --chart-5: #A99E8D;
+  /* Sidebar */
+  --sidebar: #F1F0ED;
+  --sidebar-foreground: #222831;
+  --sidebar-primary: #E4B36B;
+  --sidebar-primary-foreground: #222831;
+  --sidebar-accent: #E9E6DE;
+  --sidebar-accent-foreground: #222831;
+  --sidebar-border: #E4B36B;
+  --sidebar-ring: #E4B36B;
+}
+
+.dark {
+  --background: #222831;
+  --foreground: #DFD0B8;
+  --card: #222831;
+  --card-foreground: #DFD0B8;
+  --popover: #222831;
+  --popover-foreground: #DFD0B8;
+  --primary: #E4B36B; /* keep gold brand in dark */
+  --primary-foreground: #222831;
+  --secondary: #393E46;
+  --secondary-foreground: #FFFFFF;
+  --muted: #2B3138;
+  --muted-foreground: #C7BBA6;
+  --accent: #E4B36B;
+  --accent-foreground: #222831;
+  --destructive: #E06666;
+  --border: #E4B36B;
+  --input: #E4B36B;
+  --ring: #E4B36B;
+  --chart-1: #E4B36B;
+  --chart-2: #393E46;
+  --chart-3: #DFD0B8;
+  --chart-4: #B5AA98;
+  --chart-5: #2B3138;
+  --sidebar: #222831;
+  --sidebar-foreground: #DFD0B8;
+  --sidebar-primary: #E4B36B;
+  --sidebar-primary-foreground: #222831;
+  --sidebar-accent: #2B3138;
+  --sidebar-accent-foreground: #DFD0B8;
+  --sidebar-border: #E4B36B;
+  --sidebar-ring: #E4B36B;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3 {
+    color: var(--primary);
+  }
+  .section-dark {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+  }
+}
