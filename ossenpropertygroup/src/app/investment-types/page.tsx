@@ -2,6 +2,7 @@ import { Navbar } from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { PreviewableImage } from "@/components/media/PreviewableImage";
 
 type Project = {
   id: string;
@@ -43,14 +44,14 @@ const projects: Project[] = [
   },
 ];
 
-export default function PortfolioPage() {
+export default function InvestmentTypes() {
   return (
     <div className="font-sans">
       <Navbar />
       <section className="pt-24 pb-10 section-dark">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">Portfolio</h1>
-          <p className="mt-2 text-muted-foreground max-w-2xl">Completed property developments showcasing invested capital, realised ROI, and a short project summary.</p>
+          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">Investment Types</h1>
+          <p className="mt-2 text-card max-w-2xl">Completed property developments showcasing invested capital, realised ROI, and a short project summary.</p>
         </div>
       </section>
 
@@ -86,16 +87,16 @@ export default function PortfolioPage() {
       <section id="designs" className="py-16 section-dark">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Land & Building Packages</h2>
-          <p className="mt-2 text-muted-foreground max-w-2xl">Browse template home designs ready to be adapted to your site and council requirements.</p>
+          <p className="mt-2 text-card max-w-2xl">Browse template home designs ready to be adapted to your site and council requirements.</p>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {["plan-a.jpg", "plan-b.jpg", "plan-c.jpg"].map((src) => (
+            {["Plan A.webp", "Plan B.webp", "Plan C.webp"].map((src) => (
               <div key={src} className="overflow-hidden rounded-lg border">
                 <div className="aspect-[4/3]">
-                  <img src={`/plans/${src}`} alt={src} className="h-full w-full object-cover" />
+                  <PreviewableImage src={`/${src}`} alt={src} className="h-full w-full object-cover"/>
                 </div>
                 <div className="p-4">
-                  <div className="font-medium">{src.replace(".jpg", "").replace("-", " ").toUpperCase()}</div>
-                  <div className="text-sm text-muted-foreground">3–4 bed options • Double garage • Energy efficient</div>
+                  <div className="font-medium">{src.replace(".webp", "").toUpperCase()}</div>
+                  <div className="text-sm text-card">3–4 bed options • Double garage • Energy efficient</div>
                 </div>
               </div>
             ))}

@@ -23,7 +23,7 @@ const nav = [
     submenu: [
       { label: "Rooming Houses", href: "/investment-types/rooming-houses" },
       { label: "House and Land Packages", href: "/investment-types/house-land-package" },
-      { label: "Subdivision and Developments", href: "/portfolio?filter=in-progress" },
+      { label: "Subdivision and Developments", href: "/investment-types/subdivision-and-developments" },
     ],
   },
   {
@@ -46,10 +46,10 @@ export function Navbar() {
   const [closeTimeoutId, setCloseTimeoutId] = useState<NodeJS.Timeout | null>(null);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b bg-background/80 backdrop-blur">
+    <header className="fixed inset-x-0 top-0 z-50 border-b bg-card/100 backdrop-blur">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="font-semibold tracking-tight text-xl">
-          Ossen Property Group
+          <img src="/OPGLogoSide.webp" alt="Ossen Property Group" className="h-10 w-full"/>
         </Link>
 
         <nav className="hidden md:block">

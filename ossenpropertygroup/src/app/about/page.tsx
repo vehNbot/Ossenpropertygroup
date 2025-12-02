@@ -2,47 +2,7 @@ import { Navbar } from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-
-
-type Project = {
-  id: string;
-  title: string;
-  location: string;
-  invested: string;
-  roi: string;
-  summary: string;
-  image: string;
-};
-
-const projects: Project[] = [
-  {
-    id: "willow-terraces",
-    title: "Willow Terraces",
-    location: "Hampton, VIC",
-    invested: "$3.1M",
-    roi: "21%",
-    summary: "Twelve architecturally designed townhomes with premium landscaping and community laneways.",
-    image: "/projects/1.jpg",
-  },
-  {
-    id: "parklands-quarter",
-    title: "Parklands Quarter",
-    location: "Brunswick, VIC",
-    invested: "$2.6M",
-    roi: "17%",
-    summary: "Boutique apartments adjacent to parklands with sustainable materials and efficient layouts.",
-    image: "/projects/2.jpg",
-  },
-  {
-    id: "harbor-villas",
-    title: "Harbor Villas",
-    location: "Williamstown, VIC",
-    invested: "$4.4M",
-    roi: "19%",
-    summary: "Waterfront villas maximising outlook and privacy with refined coastal palette.",
-    image: "/projects/3.jpg",
-  },
-];
+import { PreviewableImage } from "@/components/media/PreviewableImage";
 
 export default function AboutPage() {
   return (
@@ -62,10 +22,13 @@ export default function AboutPage() {
           <div className="mt-6">
           </div>
         </div>
-        <div >
-          <div className="aspect-video w-full overflow-hidden rounded-lg border">
-            <img src="/OPGLogo.png" alt="About Ossen" className="h-full w-full object-cover bg-foreground" />
-          </div>
+        <div>
+          <PreviewableImage
+            src="/About us.webp"
+            alt="About Ossen"
+            className="aspect-video w-full"
+            imgClassName="bg-foreground"
+          />
         </div>
       </section>
       <Footer />

@@ -7,12 +7,21 @@ export default function Footer() {
         <div className="text-sm text-muted-foreground">
           © {new Date().getFullYear()} Ossen Property Group. All rights reserved.<br />
           <br />
-          Email: mail@ossenpropertygroup.com.au
+          Email: mail@ossenpropertygroup.com.au<br />
         </div>
         <div className="flex items-center gap-4 text-sm">
-          <Link href="#" className="hover:underline">LinkedIn</Link>
-          <Link href="#" className="hover:underline">Instagram</Link>
-          <Link href="#" className="hover:underline">Facebook</Link>
+          <Link href="#" className="flex items-center gap-2 hover:underline">
+            <i className="fa-brands fa-linkedin" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </Link>
+          <Link href="https://www.instagram.com" className="flex items-center gap-2 hover:underline">
+          <i className="fa-brands fa-instagram" aria-hidden="true"></i>
+            <span>Instagram</span>
+          </Link>
+          <Link href="#" className="flex items-center gap-2 hover:underline">
+          <i className="fa-brands fa-facebook" aria-hidden="true"></i>
+            <span>Facebook</span>
+          </Link>
         </div>
       </div>
     </footer>
